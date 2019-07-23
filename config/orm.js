@@ -1,6 +1,8 @@
 var connector = require("./connection.js");
 
 var orm = {
+
+    // function that selects all current information from database and stores it in a variable
     selectAll = function(verdict) {
         var select = "SELECT * FROM burgers;";
         connector.query(select, function(err, res) {
@@ -11,6 +13,7 @@ var orm = {
         });
     },
 
+    // function that takes the values input from the user and inserts them in to the database
     insertOne = function(values, verdict) {
         var insert = "INSERT INTO burgers (burger_name, devoured) VALUES ";
 
@@ -26,6 +29,7 @@ var orm = {
         });
     },
 
+    // function that takes user inputs and updates the database depending on the condition (ID tag) selected
     updateOne = function( updateInfo, condition, verdict ) {
         var update = "UPDATE burgers SET ";
 
