@@ -1,7 +1,7 @@
 import orm from "../config/orm,js";
 
 // relaying recorded info to the orm
-var burger = {
+var Burger = {
   select: orm.selectAll(),
 
   // takes the new burger name and sends it to the insertOne function
@@ -18,4 +18,4 @@ var burger = {
   }
 };
 
-module.exports = burger;
+module.exports = Burger;
